@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registered Students — College Bus Tracker</title>
+    <link rel="stylesheet" href="../../styles.css" />
+    <link rel="stylesheet" href="registered-students.css" />
+  </head>
+  <body>
+    <div id="header">
+      <header class="site-header">
+        <div class="container header-inner">
+          <h1><a class="logo" href="admin.html">College Bus Tracker</a></h1>
+          <input id="navToggle" class="nav-toggle" type="checkbox" aria-hidden="true" />
+          <label for="navToggle" class="menu-toggle" aria-label="Toggle menu"></label>
+          <nav class="main-nav">
+            <ul>
+              <li><a href="track-complaints.html">Complaints</a></li>
+              <li><a href="add-bus-routes.html">Routes</a></li>
+              <li><a href="add-drivers.html">Staff</a></li>
+              <li><a href="registered-students.html" class="active">Students</a></li>
+              <li><a href="verify-bookings.html">Bookings</a></li>
+              <li><a href="#" id="logoutBtn">Logout</a></li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+    </div>
+
+    <main class="container">
+      <div class="page-header-row">
+        <div>
+          <h2>Registered Students</h2>
+          <p class="page-subtitle">View all registered students, their bookings, and complaint statuses.</p>
+        </div>
+        <div class="students-count" id="studentsCount">0 Students</div>
+      </div>
+
+      <!-- Search/Filter bar -->
+      <div class="filter-bar">
+        <input type="text" id="searchInput" placeholder="🔍  Search by name, email, or roll number..." class="search-input" />
+        <select id="complaintFilter" class="filter-select">
+          <option value="all">All Students</option>
+          <option value="has-complaints">Has Complaints</option>
+          <option value="no-complaints">No Complaints</option>
+          <option value="has-pending">Has Pending Complaints</option>
+          <option value="all-resolved">All Resolved</option>
+        </select>
+      </div>
+
+      <!-- Students table (desktop) -->
+      <div class="table-wrapper" id="tableWrapper">
+        <table class="students-table" id="studentsTable">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Name</th>
+              <th>Roll No.</th>
+              <th>Email</th>
+              <th>Contact</th>
+              <th>Degree</th>
+              <th>Batch</th>
+              <th>Complaints</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody id="studentsTableBody"></tbody>
+        </table>
+      </div>
+
+      <!-- Mobile cards -->
+      <div id="studentCards" class="student-cards-grid"></div>
+
+      <div id="emptyMsg" class="empty-state" style="display:none;">
+        <div class="empty-icon">🎓</div>
+        <h3>No students found</h3>
+        <p>No students match your current filter.</p>
+      </div>
+    </main>
+
+    <!-- Student Details Modal -->
+    <div id="studentModal" class="modal" style="display:none;">
+      <div class="modal-content" style="max-width: 600px;">
+        <span class="close-modal" id="closeStudentModalBtn">&times;</span>
+        <h3 id="modalStudentName" style="margin-bottom: 1rem;">Student Details</h3>
+        <div id="modalStudentDetails" style="font-size: 0.95rem; line-height: 1.6;"></div>
+      </div>
+    </div>    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p>© 2026 College Bus Tracker. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="../mock-api.js"></script>
+    <script src="../auth.js"></script>
+    <script src="admin.js"></script>
+    <script src="registered-students.js"></script>
+  </body>
+</html>

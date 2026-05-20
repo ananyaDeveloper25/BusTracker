@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Live Tracking</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="live.css">
+</head>
+<body>
+    <div id="header">
+        <header class="site-header">
+            <div class="container header-inner">
+                <h1><a class="logo" href="index.html">College Bus Tracker</a></h1>
+                <input id="navToggle" class="nav-toggle" type="checkbox" aria-hidden="true">
+                <label for="navToggle" class="menu-toggle" aria-label="Toggle menu"></label>
+                <nav class="main-nav">
+                    <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="booking.html">Booking</a></li>
+                    <li><a href="./help.html">Help</a></li>
+                    <li><a href="live.html">Live Tracking</a></li>
+                    <li id="clientDashboardItem"><a href="client-signin.html">Login</a></li>
+                    <li id="clientLogoutItem"></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+    </div>
+
+  <main class="container">
+    <div class="page-header">
+      <h2>Track your Bus</h2>
+    </div>
+
+    <div class="info-section">
+      
+      <table class="status-table">
+        <thead>
+          <tr>
+            <th>Bus No.</th>
+            <th>Route</th>
+            <th>Last Stop Left</th>
+            <th>Status</th>
+            <th>Seats Left</th>
+          </tr>
+        </thead>
+        <tbody id="liveTrackingTbody"></tbody>
+      </table>
+
+      <div id="mobileStatusCards" class="mobile-status-cards">
+        <!-- Mobile cards will be loaded here -->
+      </div>
+
+      <div id="routeTimeline" style="margin-top: 2rem;"></div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© 2026 College Bus Tracker. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="client-nav.js"></script>
+  <script src="./admin/mock-api.js"></script>
+  <script type="module" src="live.js"></script>
+</body>
+</html>

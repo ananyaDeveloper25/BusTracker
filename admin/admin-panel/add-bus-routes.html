@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Add Bus Routes</title>
+    <link rel="stylesheet" href="../../styles.css" />
+    <link rel="stylesheet" href="add-bus-routes.css" />
+  </head>
+  <body>
+    <div id="header">
+      <header class="site-header">
+        <div class="container header-inner">
+          <h1><a class="logo" href="admin.html">College Bus Tracker</a></h1>
+          <input
+            id="navToggle"
+            class="nav-toggle"
+            type="checkbox"
+            aria-hidden="true"
+          />
+          <label
+            for="navToggle"
+            class="menu-toggle"
+            aria-label="Toggle menu"
+          ></label>
+          <nav class="main-nav">
+            <ul>
+              <li><a href="track-complaints.html">Complaints</a></li>
+              <li><a href="add-bus-routes.html">Routes</a></li>
+              <li><a href="add-drivers.html">Staff</a></li>
+              <li><a href="registered-students.html">Students</a></li>
+              <li><a href="verify-bookings.html">Bookings</a></li>
+              <li><a href="#" id="logoutBtn">Logout</a></li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+    </div>
+
+    <!-- Add Bus Route -->
+    <div class="info-section form-section">
+      <form id="addRouteForm" class="route-form">
+
+        <div class="form-row">
+          <label>Route Number</label>
+          <select id="routeNumber" required>
+            <option value="">Select Route</option>
+            <option value="A">A</option>
+            <option value="B">B</option>
+            <option value="C">C</option>
+            <option value="D">D</option>
+            <option value="E">E</option>
+            <option value="F">F</option>
+          </select>
+        </div>
+
+        <div class="form-row">
+          <label>Location</label>
+          <select id="routeLocation" required>
+            <option value="">Select Location</option>
+            <option value="Chandigarh">Chandigarh</option>
+            <option value="Mohali">Mohali</option>
+            <option value="Patiala">Patiala</option>
+            <option value="Kharrar">Kharrar</option>
+          </select>
+        </div>
+
+        <div class="form-row">
+          <label>Bus Number</label>
+          <input type="text" id="busNumber" required />
+        </div>
+
+        <div class="form-row">
+          <label>Stops</label>
+          <div id="stopsList">
+            <!-- Dynamic stop fields will be added here -->
+          </div>
+          <button type="button" id="addStopBtn" style="margin-top:8px;">Add Stop</button>
+        </div>
+    <!-- Modal for route details -->
+    <div id="routeModal" class="modal" style="display:none;">
+      <div class="modal-content">
+        <span class="close-modal" id="closeModalBtn">&times;</span>
+        <h3>Route Details</h3>
+        <div id="modalRouteDetails"></div>
+      </div>
+    </div>
+
+        <div class="form-row">
+          <label>Driver</label>
+          <select id="driverSelect" required>
+            <option value="">Select driver</option>
+          </select>
+        </div>
+
+        <div class="form-row">
+          <label>Seats Capacity</label>
+          <input type="number" id="seatsCapacity" value="42" readonly style="background:#f1f1f1; color:#888; cursor:not-allowed;" />
+        </div>
+
+        <div class="form-row">
+          <label>Seats Filled (Auto-calculated)</label>
+          <input type="number" id="seatsFilled" value="0" readonly style="background:#f1f1f1; color:#888; cursor:not-allowed;" />
+        </div>
+
+        <button type="submit">Add Route</button>
+      </form>
+    </div>
+
+    <!-- Bus List -->
+    <div class="table-section">
+      <div class="table-scroll">
+        <table id="busTable" class="responsive-table">
+          <thead>
+            <tr>
+              <th>Route</th>
+              <th>Bus No.</th>
+              <th>Driver</th>
+              <th>Seats Capacity</th>
+              <th>Seats Filled</th>
+              <th>Actions</th> 
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- for mobile -->
+    <div id="mobileCards" class="mobile-cards"></div>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p>© 2026 College Bus Tracker. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script type="module" src="add-bus-routes.js"></script>
+    <script src="../auth.js"></script>
+  </body>
+</html>

@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Verify Bookings — College Bus Tracker</title>
+    <link rel="stylesheet" href="../../styles.css" />
+    <link rel="stylesheet" href="registered-students.css" />
+  </head>
+  <body>
+    <div id="header">
+      <header class="site-header">
+        <div class="container header-inner">
+          <h1><a class="logo" href="admin.html">College Bus Tracker</a></h1>
+          <input
+            id="navToggle"
+            class="nav-toggle"
+            type="checkbox"
+            aria-hidden="true"
+          />
+          <label
+            for="navToggle"
+            class="menu-toggle"
+            aria-label="Toggle menu"
+          ></label>
+          <nav class="main-nav">
+            <ul>
+              <li><a href="track-complaints.html">Complaints</a></li>
+              <li><a href="add-bus-routes.html">Routes</a></li>
+              <li><a href="add-drivers.html">Staff</a></li>
+              <li><a href="registered-students.html">Students</a></li>
+              <li><a href="verify-bookings.html" class="active">Bookings</a></li>
+              <li><a href="#" id="logoutBtn">Logout</a></li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+    </div>
+
+    <main class="container">
+      <div class="page-header-row">
+        <div>
+          <h2>Manage Bookings</h2>
+          <p class="page-subtitle">View student bookings and assign bus routes.</p>
+        </div>
+      </div>
+
+      <div class="filter-bar">
+        <select id="bookingFilter" class="filter-select" style="min-width: 200px;">
+          <option value="all">All Bookings</option>
+          <option value="pending">Pending Assignment</option>
+        </select>
+      </div>
+
+      <div class="table-wrapper">
+        <table class="students-table" id="bookingsTable">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Roll Number</th>
+              <th style="min-width: 150px;">Contact Details</th>
+              <th>Requested Area</th>
+              <th>Payment</th>
+              <th>Assign Route</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody id="bookingsTableBody">
+            <!-- Bookings will be loaded here -->
+          </tbody>
+        </table>
+      </div>
+
+      <div id="studentCardsGrid" class="student-cards-grid">
+        <!-- Mobile cards will be loaded here -->
+      </div>
+
+      <div id="emptyMsg" class="empty-state" style="display:none;">
+        <div class="empty-icon">🚌</div>
+        <h3>No bookings found</h3>
+        <p>There are no active bookings to manage.</p>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p>© 2026 College Bus Tracker. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="../mock-api.js"></script>
+    <script src="../auth.js"></script>
+    <script src="admin.js"></script>
+    <script src="verify-bookings.js"></script>
+  </body>
+</html>

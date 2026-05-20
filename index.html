@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>College Bus Tracker</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div id="header">
+        <header class="site-header">
+            <div class="container header-inner">
+                <h1><a class="logo" href="index.html">College Bus Tracker</a></h1>
+                <input id="navToggle" class="nav-toggle" type="checkbox" aria-hidden="true">
+                <label for="navToggle" class="menu-toggle" aria-label="Toggle menu"></label>
+                <nav class="main-nav">
+                    <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="booking.html">Booking</a></li>
+                    <li><a href="./help.html">Help</a></li>
+                    <li><a href="live.html">Live Tracking</a></li>
+                    <li id="clientDashboardItem"><a href="client-signin.html">Login</a></li>
+                    <li id="clientLogoutItem"></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+    </div>
+
+  <main class="container">
+    <section class="hero">
+      <div class="hero-image">
+        <img src="assets/images/bus-tracker.svg">
+      </div>
+      <div class="hero-content">
+        <h2>Track your campus buses in real time</h2>
+        <p>Quick access to routes, bookings, payments, help, and driver/bus info.</p>
+
+        <div class="hero-buttons">
+          <a class="btn-primary" href="live.html">Live Tracking</a>
+          <a class="btn-outline" href="routes.html">View Routes</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="cards" aria-label="Service cards">
+      <article class="card">
+        <h3>Live Tracking</h3>
+        <p>See buses moving live on the map and estimated arrival times.</p>
+        <a class="card-btn" href="live.html">Open Live</a>
+      </article>
+
+      <article class="card">
+        <h3>Bus Routes</h3>
+        <p>Browse route maps and stop details for all campus routes.</p>
+        <a class="card-btn" href="routes.html">View Routes</a>
+      </article>
+
+      <article class="card">
+        <h3>Bus Booking & Payments</h3>
+        <p>Reserve your seat and manage payments securely.</p>
+        <a class="card-btn" href="booking.html">Book Now</a>
+      </article>
+
+      <article class="card">
+        <h3>Help Center</h3>
+        <p>Get FAQs, submit tickets, or contact support for assistance.</p>
+        <a class="card-btn" href="help.html">Get Help</a>
+      </article>
+
+      <article class="card">
+        <h3>Driver & Bus Details</h3>
+        <p>View verified driver profiles and vehicle information.</p>
+        <a class="card-btn" href="drivers.html">View Details</a>
+      </article>
+    </section>
+  </main>
+
+  <div id="footer">
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <p>© 2026 College Bus Tracker. All rights reserved.</p>
+        </div>
+    </footer>
+  </div>
+  <script src="client-nav.js"></script>
+  <script src="index.js"></script>
+</body>
+</html>

@@ -1,0 +1,263 @@
+.help-container {
+  padding: 40px;
+  font-family: Arial, sans-serif;
+}
+
+.help-container h2 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.logo {
+  color: beige;
+  margin: 0;
+  font-size: 1.3rem;
+  text-decoration: none;
+}
+
+/* MAIN WRAPPER */
+.help {
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+}
+
+/* COMPLAINT SECTION */
+.complaint-section {
+  flex: 1;
+}
+
+.complaint-section h3 {
+  margin-bottom: 20px;
+  color: #1f2937;
+}
+
+/* FORM SECTION */
+.help-form {
+  background: #fff;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,.08);
+}
+
+.help-form label {
+  display: block;
+  margin-top: 15px;
+  font-weight: 600;
+}
+
+.help-form input,
+
+.help-form input,
+.help-form textarea,
+.help-form select {
+  width: 100%;
+  padding: 10px 12px;
+  margin-top: 6px;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+  font-size: 14px;
+  background: #f8fafc;
+  outline: none;
+  transition: 0.2s;
+}
+
+.help-form input:focus,
+.help-form textarea:focus,
+.help-form select:focus {
+  border-color: #4456bd;
+  background: #fff;
+  box-shadow: 0 0 0 2px rgba(93, 142, 239, 0.15);
+}
+
+.help-form textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.card-btn {
+  margin-top: 20px;
+  padding: 12px;
+  width: 100%;
+  border: none;
+  border-radius: 8px;
+  background: var(primary);
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.card-btn:hover {
+  background: var(primary-dark);
+}
+
+/* FAQ AND TRACKING GRID */
+.faq-and-tracking {
+  width: 400px;
+  display: grid;
+  grid-template-rows: auto auto;
+  gap: 20px;
+}
+
+/* FAQ SECTION */
+.help-faq {
+  background: #fff;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,.08);
+}
+
+.help-faq h3 {
+  margin-bottom: 15px;
+}
+
+/* ACCORDION */
+.help-faq details {
+  border-bottom: 1px solid #e5e7eb;
+  padding: 10px 0;
+}
+
+/* SUMMARY WITH ARROW */
+.help-faq summary {
+  list-style: none;
+  cursor: pointer;
+  font-weight: 600;
+  position: relative;
+  padding-right: 25px;
+}
+
+/* REMOVE DEFAULT MARKER */
+.help-faq summary::-webkit-details-marker {
+  display: none;
+}
+
+/* CUSTOM ARROW */
+.help-faq summary::after {
+  content: "▶";
+  position: absolute;
+  right: 0;
+  transition: transform .3s ease;
+}
+
+/* ROTATE ARROW WHEN OPEN */
+.help-faq details[open] summary::after {
+  transform: rotate(90deg);
+}
+
+.help-faq p {
+  margin-top: 10px;
+  color: #555;
+  line-height: 1.5;
+}
+
+.help-faq .faq-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease, padding 0.4s ease;
+}
+
+.help-faq details[open] .faq-content {
+  max-height: 200px; /* or larger if needed */
+  padding-top: 10px;
+}
+
+/* TRACKING SECTION */
+.tracking-section {
+  max-width: 800px;
+  margin: 2% auto 0;
+  background: #fff;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,.08);
+}
+
+.tracking-section h3 {
+  margin-bottom: 20px;
+  color: #1f2937;
+  text-align: center;
+}
+
+#trackForm {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+  justify-content: center;
+}
+
+#trackForm input {
+  flex: 1;
+  max-width: 300px;
+  padding: 8px 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+}
+
+#trackForm button {
+  padding: 8px 16px;
+  background: #3b82f6;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+#trackForm button:hover {
+  background: #2563eb;
+}
+
+.tracking-info {
+  background: #f9fafb;
+  padding: 15px;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+  margin-top: 20px;
+}
+
+.tracking-info h4 {
+  margin: 0 0 10px 0;
+  color: #1f2937;
+}
+
+.tracking-info p {
+  margin: 5px 0;
+  color: #374151;
+}
+
+/* MOBILE */
+@media (max-width: 872px) {
+
+  .help {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+
+  /* MAKE BOTH SIDES SAME WIDTH */
+  .complaint-section,
+  .faq-and-tracking {
+    width: 100%;
+    max-width: 600px;
+  }
+
+  /* REMOVE DESKTOP FIXED WIDTH */
+  .faq-and-tracking {
+    width: 100%;
+  }
+
+  /* CENTER TRACKING BOX */
+  .tracking-section {
+    margin: 30px auto 0;
+    width: 100%;
+    max-width: 800px; 
+  }
+
+  #trackForm {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #trackForm input {
+    max-width: 100%;
+    width: 100%;
+  }
+}

@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Booking & Payments — College Bus Tracker</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="booking.css">
+</head>
+<body>
+    <div id="header">
+        <header class="site-header">
+            <div class="container header-inner">
+                <h1><a class="logo" href="index.html">College Bus Tracker</a></h1>
+                <input id="navToggle" class="nav-toggle" type="checkbox" aria-hidden="true">
+                <label for="navToggle" class="menu-toggle" aria-label="Toggle menu"></label>
+                <nav class="main-nav">
+                    <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="booking.html">Booking</a></li>
+                    <li><a href="./help.html">Help</a></li>
+                    <li><a href="live.html">Live Tracking</a></li>
+                    <li id="clientDashboardItem"><a href="client-signin.html">Login</a></li>
+                    <li id="clientLogoutItem"></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+    </div>
+
+  <main class="container">
+
+    <div class="booking-wrapper">
+
+      <div class="page-header">
+      <h2>Bus Booking & Payments</h2>
+      <p>Reserve your seat and complete payment securely</p>
+      </div>
+
+      <form id="bookingForm" class="booking-form" action="review-payment.html" method="get">
+      <label for="name">Name</label>
+      <input id="name" name="name" required>
+
+      <label for="email">Email</label>
+      <input id="email" name="email" type="email" required>
+
+      <label for="address">Address</label>
+      <input id="address" name="address">
+
+      <label for="contact">Contact Number</label>
+      <input id="contact" name="contact" type="tel">
+
+      <label for="routeCity">Route city</label>
+      <select id="routeCity" name="routeCity">
+        <option>Chandigarh</option>
+        <option>Panchkula</option>
+        <option>Mohali</option>
+        <option>Kharrar</option>
+        <option>Patiala</option>
+      </select>
+
+      <label for="roll">Roll Number</label>
+      <input id="roll" name="roll">
+
+      <label for="degree">Degree Details</label>
+      <input id="degree" name="degree">
+
+      <label for="gradYear">End Year (Graduation Year)</label>
+      <input id="gradYear" name="gradYear" type="number" min="2022" max="2030">
+
+      <label>Payment Options</label>
+      <div class="payment-options">
+        <label><input type="radio" name="payment" value="card" checked> Card</label>
+        <label><input type="radio" name="payment" value="upi"> UPI</label>
+        <label><input type="radio" name="payment" value="netbanking"> Net banking</label>
+      </div>
+
+      <div style="margin-top:1rem">
+        <button type="submit" class="card-btn">Proceed to Payment</button>
+      </div>
+    </form>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© 2026 College Bus Tracker. All rights reserved.</p>
+    </div>
+  </footer>
+  <script src="client-nav.js"></script>
+  <script src="booking.js"></script>
+</body>
+</html>

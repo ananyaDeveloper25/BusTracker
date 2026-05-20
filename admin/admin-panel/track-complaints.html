@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Track Complaints — College Bus Tracker</title>
+    <link rel="stylesheet" href="../../styles.css" />
+    <link rel="stylesheet" href="track-complaints.css" />
+  </head>
+  <body>
+    <div id="header">
+      <header class="site-header">
+        <div class="container header-inner">
+          <h1><a class="logo" href="admin.html">College Bus Tracker</a></h1>
+          <input id="navToggle" class="nav-toggle" type="checkbox" aria-hidden="true" />
+          <label for="navToggle" class="menu-toggle" aria-label="Toggle menu"></label>
+          <nav class="main-nav">
+            <ul>
+              <li><a href="track-complaints.html">Complaints</a></li>
+              <li><a href="add-bus-routes.html">Routes</a></li>
+              <li><a href="add-drivers.html">Staff</a></li>
+              <li><a href="registered-students.html">Students</a></li>
+              <li><a href="verify-bookings.html">Bookings</a></li>
+              <li><a href="#" id="logoutBtn">Logout</a></li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+    </div>
+
+    <main class="container">
+      <h2>Track Complaints</h2>
+
+      <!-- Student filter banner (shown when deep-linked from students tab) -->
+      <div id="studentFilterBanner" style="display:none; align-items:center; gap:1rem; background:#eff6ff; border:1.5px solid #bfdbfe; border-radius:10px; padding:0.75rem 1.25rem; margin-bottom:1.25rem;">
+        <span>🎓 Showing complaints for: <strong id="filterStudentName"></strong></span>
+        <a href="track-complaints.html" style="margin-left:auto; color:#2563eb; font-size:0.875rem; font-weight:500; text-decoration:none;">← Show all complaints</a>
+      </div>
+
+      <div style="margin-bottom: 18px; display: flex; gap: 12px; align-items: center;">
+        <label for="complaintStatusFilter" style="font-weight: 600;">Filter by Status:</label>
+        <select id="complaintStatusFilter" style="padding: 8px 12px; border-radius: 6px; border: 1px solid #d1d5db; font-size: 14px;">
+          <option value="all">All</option>
+          <option value="Pending">Pending</option>
+          <option value="In Progress">In Progress</option>
+          <option value="Resolved">Resolved</option>
+        </select>
+      </div>
+      <div id="complaintsContainer" class="complaints-grid"></div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p>© 2026 College Bus Tracker. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="../mock-api.js"></script>
+    <script src="../auth.js"></script>
+    <script src="admin.js"></script>
+    <script type="module" src="track-complaints.js"></script>
+  </body>
+</html>

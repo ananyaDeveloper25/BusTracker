@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Panel — College Bus Tracker</title>
+    <link rel="stylesheet" href="../../styles.css" />
+    <link rel="stylesheet" href="admin.css" />
+  </head>
+  <body>
+    <div id="header">
+      <header class="site-header">
+        <div class="container header-inner">
+          <h1><a class="logo" href="admin.html">College Bus Tracker</a></h1>
+          <input id="navToggle" class="nav-toggle" type="checkbox" aria-hidden="true" />
+          <label for="navToggle" class="menu-toggle" aria-label="Toggle menu"></label>
+          <nav class="main-nav">
+            <ul>
+              <li><a href="track-complaints.html">Complaints</a></li>
+              <li><a href="add-bus-routes.html">Routes</a></li>
+              <li><a href="add-drivers.html">Staff</a></li>
+              <li><a href="registered-students.html">Students</a></li>
+              <li><a href="verify-bookings.html">Bookings</a></li>
+              <li><a href="#" id="logoutBtn">Logout</a></li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+    </div>
+
+    <main class="container">
+      <h2>Admin Panel</h2>
+      <section class="cards" aria-label="Service cards">
+        <article class="card">
+          <h3>Check Complaints</h3>
+          <p>Resolve complaints added by students</p>
+          <a class="card-btn" href="track-complaints.html">Resolve Complaints</a>
+        </article>
+
+        <article class="card">
+          <h3>Add/Track Bus Routes</h3>
+          <p>Add bus routes or track the live status of routes.</p>
+          <a class="card-btn" href="add-bus-routes.html">Add/Track Routes</a>
+        </article>
+
+        <article class="card">
+          <h3>Driver Details</h3>
+          <p>Add new drivers in your staff list</p>
+          <a class="card-btn" href="add-drivers.html">Add Drivers</a>
+        </article>
+
+        <article class="card">
+          <h3>Registered Students</h3>
+          <p>View student profiles, complaint statuses, and details</p>
+          <a class="card-btn" href="registered-students.html">View Students</a>
+        </article>
+
+        <article class="card">
+          <h3>Manage Bookings</h3>
+          <p>View student bookings and assign bus routes</p>
+          <a class="card-btn" href="verify-bookings.html">Manage Bookings</a>
+        </article>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p>© 2026 College Bus Tracker. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="../mock-api.js"></script>
+    <script src="../auth.js"></script>
+    <script src="admin.js"></script>
+  </body>
+</html>

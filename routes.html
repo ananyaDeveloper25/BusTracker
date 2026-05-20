@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Bus Routes</title>
+
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="routes.css">
+</head>
+
+<body class="routes-page">
+
+    <div id="header">
+        <header class="site-header">
+            <div class="container header-inner">
+                <h1><a class="logo" href="index.html">College Bus Tracker</a></h1>
+                <input id="navToggle" class="nav-toggle" type="checkbox" aria-hidden="true">
+                <label for="navToggle" class="menu-toggle" aria-label="Toggle menu"></label>
+                <nav class="main-nav">
+                    <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="booking.html">Booking</a></li>
+                    <li><a href="./help.html">Help</a></li>
+                    <li><a href="live.html">Live Tracking</a></li>
+                    <li id="clientDashboardItem"><a href="client-signin.html">Login</a></li>
+                    <li id="clientLogoutItem"></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+    </div>
+
+
+<main class="routes-container">
+  <h2>Bus Routes</h2>
+  <div id="dynamicRoutes"></div>
+</main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© 2026 College Bus Tracker. All rights reserved.</p>
+    </div>
+  </footer>
+
+</body>
+<script src="client-nav.js"></script>
+<script type="module" src="routes.js"></script>
+</html>

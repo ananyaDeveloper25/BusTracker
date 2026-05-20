@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Staff Login — College Bus Tracker</title>
+  <link rel="stylesheet" href="login.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="login-bg">
+    <div class="login">
+      <div class="login-logo">🚌</div>
+      <h2>Staff Portal</h2>
+      <p class="login-subtitle">College Bus Tracker</p>
+
+      <form id="loginForm">
+        <div class="role-tabs">
+          <label class="role-tab" id="tabAdmin">
+            <input type="radio" name="role" value="admin" checked>
+            <span>Admin</span>
+          </label>
+          <label class="role-tab" id="tabDriver">
+            <input type="radio" name="role" value="driver">
+            <span>Driver</span>
+          </label>
+        </div>
+
+        <div class="form-field">
+          <label for="loginUsername">Username</label>
+          <input type="text" id="loginUsername" required placeholder="Enter username" autocomplete="username">
+        </div>
+
+        <div class="form-field">
+          <label for="loginPassword">Password</label>
+          <input type="password" id="loginPassword" required placeholder="Enter password" autocomplete="current-password">
+        </div>
+
+        <div id="formError" class="error-message"></div>
+        <button type="submit" class="login-btn">Login</button>
+      </form>
+
+      <p class="login-hint">Drivers: use the credentials set by your admin.</p>
+    </div>
+  </div>
+
+  <script src="auth.js"></script>
+  <script src="login.js"></script>
+</body>
+</html>

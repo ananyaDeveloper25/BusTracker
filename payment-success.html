@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Payment Successful — College Bus Tracker</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <h1 class="logo">College Bus Tracker</h1>
+        <input
+          id="navTogglePS"
+          class="nav-toggle"
+          type="checkbox"
+          aria-hidden="true"
+        />
+        <label for="navTogglePS" class="menu-toggle" aria-label="Toggle menu"
+          >☰</label
+        >
+        <nav class="main-nav">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="live.html">Live</a></li>
+            <li><a href="routes.html">Routes</a></li>
+            <li><a href="booking.html">Booking</a></li>
+            <li><a href="help.html">Help</a></li>
+            <li id="clientDashboardItem"><a href="client-signin.html">Login</a></li>
+            <li id="clientLogoutItem"></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container success-page">
+      <div class="success-card">
+        <div class="success-icon">✓</div>
+
+        <h2>Payment Successful</h2>
+
+        <p>
+          Your bus booking has been successfully completed. Further details
+          regarding your bus route and driver information will be emailed to you
+          within 24 hours.
+        </p>
+
+        <a href="index.html" class="success-btn"> Back to Home </a>
+      </div>
+    </main>
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p>© 2026 College Bus Tracker. All rights reserved.</p>
+      </div>
+    </footer>
+    <script src="client-nav.js"></script>
+  </body>
+</html>

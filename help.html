@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+
+<title>Help Center</title>
+
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="help.css">
+
+</head>
+
+<body>
+
+    <div id="header">
+        <header class="site-header">
+            <div class="container header-inner">
+                <h1><a class="logo" href="index.html">College Bus Tracker</a></h1>
+                <input id="navToggle" class="nav-toggle" type="checkbox" aria-hidden="true">
+                <label for="navToggle" class="menu-toggle" aria-label="Toggle menu"></label>
+                <nav class="main-nav">
+                    <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="booking.html">Booking</a></li>
+                    <li><a href="./help.html">Help</a></li>
+                    <li><a href="live.html">Live Tracking</a></li>
+                    <li id="clientDashboardItem"><a href="client-signin.html">Login</a></li>
+                    <li id="clientLogoutItem"></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+    </div>
+
+<main class="help-container">
+
+<h2>Help Center</h2>
+
+<div class="help">
+
+<div class="complaint-section">
+  <h3>Log a Complaint</h3>
+  <form id="complaintForm" class="help-form">
+
+  <label>Name</label>
+  <input type="text" id="complaintName" required>
+
+  <label>Email</label>
+  <input type="email" id="complaintEmail" required>
+
+  <label>Complaint Type</label>
+  <select id="complaintType" required>
+    <option value="">Select Type</option>
+    <option value="general">General Complaint</option>
+    <option value="bus">Bus Complaint</option>
+  </select>
+
+  <div id="busFields" style="display: none;">
+    <label>Assigned Bus Number</label>
+    <input type="text" id="complaintBusNumber" readonly style="background:#f1f1f1; color:#888; cursor:not-allowed;">
+
+    <label>Assigned Driver Name</label>
+    <input type="text" id="complaintDriverName" readonly style="background:#f1f1f1; color:#888; cursor:not-allowed;">
+  </div>
+
+  <label>Complaint Details</label>
+  <textarea id="complaintDetails" required></textarea>
+
+  <button type="submit" class="card-btn">Submit Complaint</button>
+
+  </form>
+</div>
+
+<div class="faq-and-tracking">
+  <div class="help-faq">
+
+  <h3>FAQs</h3>
+
+  <details>
+    <summary>How do I track a bus?</summary>
+    <div class="faq-content">
+      <p>Use the Live Tracking page to see current bus statuses.</p>
+    </div>
+  </details>
+
+  <details>
+    <summary>How do I book a seat?</summary>
+    <div class="faq-content">
+      <p>Go to Booking & Payments and complete the booking form.</p>
+    </div>
+  </details>
+
+  <details>
+    <summary>What if my bus is late?</summary>
+    <div class="faq-content">
+      <p>Contact support via the complaint form.</p>
+    </div>
+  </details>
+  </div>
+
+  <div class="tracking-section">
+    <h3>Track Your Complaint</h3>
+    <form id="trackForm">
+      <label>Tracking Number</label>
+      <input type="text" id="trackingNumber" required>
+      <button type="submit" class="card-btn">Track</button>
+    </form>
+    <div id="trackingResult"></div>
+  </div>
+</div>
+
+</div>
+
+</main>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <p>© 2026 College Bus Tracker. All rights reserved.</p>
+        </div>
+    </footer>
+<script src="client-nav.js"></script>
+<script type="module" src="help.js"></script>
+</body>
+</html>

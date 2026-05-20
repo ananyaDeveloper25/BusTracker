@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Driver Panel — College Bus Tracker</title>
+    <link rel="stylesheet" href="../../styles.css" />
+    <link rel="stylesheet" href="driver.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div id="header">
+      <header class="site-header">
+        <div class="container header-inner">
+          <h1><a class="logo" href="driver.html">College Bus Tracker</a></h1>
+          <div id="driverGreeting" style="color:#fff; font-size:0.95rem; font-weight:500;"></div>
+          <div style="display:flex; gap:10px; align-items:center;">
+            <button id="resetTripBtn" style="background:#ef444422; color:#fff; border:1px solid #ef444444; padding:8px 18px; border-radius:8px; cursor:pointer; font-size:0.9rem; font-weight:600;">Reset Trip</button>
+            <button id="logoutBtn" style="background:#ffffff22; color:#fff; border:1px solid #ffffff44; padding:8px 18px; border-radius:8px; cursor:pointer; font-size:0.9rem; font-weight:600;">Logout</button>
+          </div>
+        </div>
+      </header>
+    </div>
+
+    <main class="container" style="padding-top:2rem;">
+      <div id="driverInfo" class="driver-info-bar" style="background:#f0f4ff;border:1.5px solid #c7d2fe;border-radius:12px;padding:1rem 1.5rem;margin-bottom:1.5rem;display:none;">
+        <!-- Driver info shown here -->
+      </div>
+
+      <div id="noBusMsg" style="display:none; text-align:center; padding:3rem; color:#64748b; background:#f8fafc; border-radius:12px; border:1.5px dashed #cbd5e1;">
+        <div style="font-size:2.5rem; margin-bottom:1rem;">🚌</div>
+        <h3 style="color:#1e3a5f; margin-bottom:0.5rem;">No Bus Assigned</h3>
+        <p>You don't have a bus assigned yet. Please contact your admin.</p>
+      </div>
+
+      <div id="busPanel" style="display:none;">
+        <h2 id="routeTitle" style="margin-bottom:1rem; color:#1e3a5f;"></h2>
+        <div id="routeDetails" style="background:#f0f4ff; border-radius:12px; padding:1rem 1.5rem; margin-bottom:1.5rem; border:1.5px solid #c7d2fe;"></div>
+        <h3 style="margin-bottom:0.75rem; color:#374151;">Stops — Update Arrival Times</h3>
+        <div id="stopsContainer"></div>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p>© 2026 College Bus Tracker. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="../mock-api.js"></script>
+    <script src="../auth.js"></script>
+    <script type="module" src="driver.js"></script>
+  </body>
+</html>

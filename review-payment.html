@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="review-payment.css">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <div id="header">
+      <header class="site-header">
+        <div class="container header-inner">
+          <h1><a class="logo" href="index.html">College Bus Tracker</a></h1>
+          <input
+            id="navToggle"
+            class="nav-toggle"
+            type="checkbox"
+            aria-hidden="true"
+          />
+          <label for="navToggle" class="menu-toggle" aria-label="Toggle menu"
+            >☰</label
+          >
+          <nav class="main-nav">
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="booking.html">Booking</a></li>
+              <li><a href="./help.html">Help</a></li>
+              <li><a href="live.html">Live Tracking</a></li>
+              <li id="clientDashboardItem"><a href="client-signin.html">Login</a></li>
+              <li id="clientLogoutItem"></li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+    </div>
+
+    <main class="container">
+      <div class="review-wrapper">
+        <div class="review-card">
+          <div class="review-title">
+            <h2>Review Payment</h2>
+            <p>Please confirm your booking payment</p>
+          </div>
+
+          <!-- getting user data -->
+          <div id="userData" class="user-data"></div>
+          
+          <table class="fee-table">
+            <tr>
+              <td>Bus Route Fee per year</td>
+              <td>₹35000</td>
+            </tr>
+
+            <tr>
+              <td>Service Charge</td>
+              <td>₹100</td>
+            </tr>
+
+            <tr>
+              <td>Total</td>
+              <td>₹35100</td>
+            </tr>
+          </table>
+
+          <button class="confirm-btn" onclick="confirmPayment()">Confirm Payment</button>
+        </div>
+      </div>
+    </main>
+
+    <script src="client-nav.js"></script>
+    <script src="review-payment.js"></script>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© 2026 College Bus Tracker. All rights reserved.</p>
+    </div>
+  </footer>
+  </body>
+</html>

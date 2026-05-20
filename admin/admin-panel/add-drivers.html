@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Add Drivers</title>
+    <link rel="stylesheet" href="../../styles.css" />
+    <link rel="stylesheet" href="add-bus-routes.css" />
+  </head>
+  <body>
+    <div id="header">
+      <header class="site-header">
+        <div class="container header-inner">
+          <h1><a class="logo" href="admin.html">College Bus Tracker</a></h1>
+          <input
+            id="navToggle"
+            class="nav-toggle"
+            type="checkbox"
+            aria-hidden="true"
+          />
+          <label
+            for="navToggle"
+            class="menu-toggle"
+            aria-label="Toggle menu"
+          ></label>
+          <nav class="main-nav">
+            <ul>
+              <li><a href="track-complaints.html">Complaints</a></li>
+              <li><a href="add-bus-routes.html">Routes</a></li>
+              <li><a href="add-drivers.html">Staff</a></li>
+              <li><a href="registered-students.html">Students</a></li>
+              <li><a href="verify-bookings.html">Bookings</a></li>
+              <li><a href="#" id="logoutBtn">Logout</a></li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+    </div>
+
+    <div class="info-section form-section">
+      <form id="addDriverForm" class="route-form">
+        <div class="form-row">
+          <label>Driver Name</label>
+          <input type="text" id="driverName" required />
+        </div>
+        <div class="form-row">
+          <label>License Number</label>
+          <input type="text" id="licenseNumber" required />
+        </div>
+        <div class="form-row">
+          <label>Age</label>
+          <input type="number" id="age" min="18" required />
+        </div>
+        <div class="form-row">
+          <label>Blood Group</label>
+          <input type="text" id="bloodGroup" required />
+        </div>
+        <div class="form-row">
+          <label>Contact Number</label>
+          <input type="tel" id="contactNumber" required />
+        </div>
+        <div class="form-row">
+          <label>Login Username</label>
+          <input type="text" id="driverUsername" required placeholder="Username for driver login" autocomplete="off"/>
+        </div>
+        <div class="form-row">
+          <label>Login Password</label>
+          <input type="password" id="driverPassword" required placeholder="Password for driver login" autocomplete="new-password"/>
+        </div>
+        <button type="submit">Add Driver</button>
+      </form>
+    </div>
+
+
+    <div class="table-section">
+      <div class="table-scroll">
+        <table id="driverTable" class="responsive-table">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>License</th>
+              <th>Age</th>
+              <th>Blood Group</th>
+              <th>Contact</th>
+              <th>Status</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- for mobile -->
+    <div id="mobileDriverCards" class="mobile-cards"></div>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p>© 2026 College Bus Tracker. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script type="module" src="add-drivers.js"></script>
+    <script src="../auth.js"></script>
+  </body>
+</html>
